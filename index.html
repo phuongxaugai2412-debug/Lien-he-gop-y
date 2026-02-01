@@ -6,40 +6,66 @@
 <style>
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  background: #3b8f3f;
+  background: #2e7d32;
 }
 
-.contact-wrapper {
+/* KHUNG TỔNG */
+.contact-section {
   display: flex;
   justify-content: center;
   padding: 60px 20px;
 }
 
-.contact-form {
-  background: #fff;
+/* HỘP LIÊN HỆ */
+.contact-box {
+  background: #ffffff;
+  display: flex;
+  max-width: 1000px;
   width: 100%;
-  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* CỘT TRÁI */
+.contact-info {
+  background: #2e7d32;
+  color: #ffffff;
+  width: 40%;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.contact-info p {
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+/* CỘT PHẢI */
+.contact-form {
+  width: 60%;
+  padding: 30px;
 }
 
 .contact-form h2 {
   margin-top: 0;
   color: #2e7d32;
-  text-align: center;
+  font-size: 22px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 6px;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .form-group input,
@@ -60,7 +86,7 @@ button {
   width: 100%;
   padding: 14px;
   background: #2e7d32;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -70,36 +96,72 @@ button {
 button:hover {
   background: #256428;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="contact-wrapper">
-  <form class="contact-form"
-        action="https://formspree.io/f/mojlvggl"
-        method="POST">
+<section class="contact-section">
+  <div class="contact-box">
 
-    <h2>Liên hệ – Góp ý</h2>
+    <!-- THÔNG TIN LIÊN HỆ -->
+    <div class="contact-info">
+      <h2>Thông tin liên hệ</h2>
 
-    <div class="form-group">
-      <label>Họ và tên</label>
-      <input type="text" name="name" required>
+      <p><b>📍 Địa chỉ:</b><br>
+      Thái Nguyên, Việt Nam</p>
+
+      <p><b>📞 Điện thoại:</b><br>
+      0915.656.001</p>
+
+      <p><b>✉️ Email:</b><br>
+      phuongxaugai2412@gmail.com</p>
+
+      <p>
+        Nếu bạn có câu hỏi hoặc góp ý,<br>
+        hãy gửi thông tin cho chúng tôi qua form bên cạnh.<br><br>
+        Chúng tôi luôn lắng nghe mọi ý kiến để hoàn thiện sản phẩm này.
+      </p>
     </div>
 
-    <div class="form-group">
-      <label>Email liên hệ</label>
-      <input type="email" name="email" required>
-    </div>
+    <!-- FORM LIÊN HỆ -->
+    <form class="contact-form"
+          action="https://formspree.io/f/mojlvggl"
+          method="POST">
 
-    <div class="form-group">
-      <label>Nội dung góp ý</label>
-      <textarea name="message" required></textarea>
-    </div>
+      <h2>Liên hệ – Góp ý</h2>
 
-    <button type="submit">GỬI TIN NHẮN</button>
-  </form>
-</div>
+      <div class="form-group">
+        <label>Họ và tên</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email liên hệ</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Nội dung góp ý</label>
+        <textarea name="message" required></textarea>
+      </div>
+
+      <button type="submit">GỬI TIN NHẮN</button>
+    </form>
+
+  </div>
+</section>
 
 </body>
 </html>
