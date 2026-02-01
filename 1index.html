@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Liên hệ</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* NỀN TRANG */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f2ee;
+}
+
+/* KHU VỰC CHUNG */
+.contact-section {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 0 20px;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 32px;
+}
+
+/* HỘP CHUNG */
+.box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* KHUNG TRÁI */
+.contact-info {
+  width: 40%;
+}
+
+.contact-info h2 {
+  font-family: 'Lobster', cursive;
+  color: #f1c232;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.contact-info p {
+  color: #444;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+
+.contact-info b {
+  color: #f1c232;
+  font-weight: 500;
+}
+
+/* KHUNG PHẢI */
+.contact-form {
+  width: 60%;
+}
+
+.contact-form h2 {
+  font-family: 'Lobster', cursive;
+  color: #f1c232;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f1c232;
+}
+
+/* NÚT GỬI */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #f1c232;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ddb020;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- THÔNG TIN -->
+    <div class="box contact-info">
+      <h2>Thông tin</h2>
+
+      <p><b>Địa chỉ:</b><br>
+      Trường THPT Đại Từ, xã Đại Phúc, tỉnh Thái Nguyên</p>
+
+      <p><b>Email:</b><br>
+      stem12a3thptdaitu@gmail.com</p>
+
+      <p><b>Hotline:</b><br>
+      0399.701.298</p>
+
+      <p>
+        Chúng tôi luôn lắng nghe mọi ý kiến đóng góp  
+        để hoàn thiện dự án STEM này.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <form class="box contact-form"
+          action="https://formspree.io/f/mojlvggl"
+          method="POST">
+
+      <h2>Gửi tin nhắn</h2>
+
+      <div class="form-group">
+        <label>Họ và tên</label>
+        <input type="text" name="name" placeholder="Nhập tên của bạn" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email liên hệ</label>
+        <input type="email" name="email" placeholder="name@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Nội dung góp ý</label>
+        <textarea name="message" placeholder="Bạn muốn nhắn gửi điều gì?" required></textarea>
+      </div>
+
+      <button type="submit">GỬI TIN NHẮN</button>
+    </form>
+
+  </div>
+</section>
+
+</body>
+</html>
