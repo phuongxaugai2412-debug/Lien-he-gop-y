@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Liên hệ</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #3b8f3f;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #256428;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-wrapper">
+  <form class="contact-form"
+        action="https://formspree.io/f/mojlvggl"
+        method="POST">
+
+    <h2>Liên hệ – Góp ý</h2>
+
+    <div class="form-group">
+      <label>Họ và tên</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email liên hệ</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Nội dung góp ý</label>
+      <textarea name="message" required></textarea>
+    </div>
+
+    <button type="submit">GỬI TIN NHẮN</button>
+  </form>
+</div>
+
+</body>
+</html>
